@@ -23,3 +23,12 @@ class gtUIOutputDataNode:
                 "ui": {"INPUT": ""},
                 "result": ("",),
             }
+
+        # The latest updates to Comfy seem to have broken the node. 
+        # Using validate_input as described in the documentation (https://docs.comfy.org/essentials/custom_node_more_on_inputs) 
+        # resolves the issue for JSON inputs (CONFIG and MEMORY).
+        # TODO For more complex objects (AGENT, RULESETS, TOOLS), it remains to be seen what has changed in the ComfyUI code for ui.
+        @classmethod
+        def VALIDATE_INPUTS(s, input_types):
+            return True
+
