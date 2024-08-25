@@ -25,7 +25,7 @@ class gtUIOutputDataNode:
             }
 
     # resolve no output (at least for me) for CONFIG and MEMORY - must have a look at ComfyUI code to see what changed (security) for STRING input type
-    # non-json type AGENT, RULESETS and TOOLS does'nt work atm
+    # non-json type AGENT, RULESETS and TOOLS does'nt work atm 
     @classmethod
     def VALIDATE_INPUTS(s, input_types):
         return True
